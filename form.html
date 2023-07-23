@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form</title>
+    <link rel="stylesheet" type="text/css" href="/static/form.css">
+</head>
+<body>
+    <h1>Form</h1>
+    <form action="/form" method="post">
+        <!-- Replace 'col1', 'col2', etc., with the actual column names you need -->
+        <label for="Name">Name:</label>
+        <input type="text" name="Name" required>
+        <br>
+        <label for="age">:year</label>
+        <input type="number" name="age" id="age" required>
+        <br>
+        <label for="occ">Branch</label>
+        <select name="occ" id="occ"  required>
+            <option value=" ">Branch</option>
+            <option value="CSE">CSE</option>
+            <option value="CAI">CAI</option>
+            <option value="CSD">CSD</option>
+            <option value="CSM">CSM</option>
+            <option value="CSC">CSC</option>
+            <option value="AID">AID</option>
+            <option value="CAI">CAI</option>
+            <option value="EEE">EEE</option>
+            <option value="CIVIL">CIVIL</option>
+            <option value="MECH">MECH</option>
+            <option value="Others">others</option>
+        </select>
+        <br>
+        <label for="st">BACKLOGS:</label>
+        <select name="st" required>
+            <option value=" ">BACKLOGS</option>
+            <option value="O">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="more than 10">more than 10</option>
+        </select>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <a href="{{ url_for('pie_chart') }}">View Pie Chart</a>
+    <a href="{{ url_for('scatter_plot') }}">View scatter plot</a>
+</body>
+</html> 
